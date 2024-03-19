@@ -1,9 +1,13 @@
+ifeq ($(strip $(DEVKITPPC)),)
+$(error "Please set DEVKITPPC in your environment. export DEVKITPPC=<path to>devkitPPC")
+endif
 
+include $(DEVKITPPC)/wii_rules
 
 CC = powerpc-eabi-gcc
 AR = powerpc-eabi-ar
 CFLAGS = -MMD -MP -Wall -DGEKKO -mrvl -mcpu=750 -meabi -mhard-float  -DHW_RVL -O2 -ggdb
-INCLUDE_FLAGS = -I $(DEVKITPPC)/include -I ../include/ -I $(DEVKITPPC)/libogc/include
+INCLUDE_FLAGS = -I $(DEVKITPRO)/include -I ../include/ -I $(DEVKITPRO)/libogc/include
 
 all:
 	$(CC) $(CFLAGS) $(INCLUDE_FLAGS) -c gc_gl.c
