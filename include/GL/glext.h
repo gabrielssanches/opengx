@@ -7264,6 +7264,7 @@ GLAPI void APIENTRY glFrameTerminatorGREMEDY (void);
 typedef void (APIENTRYP PFNGLFRAMETERMINATORGREMEDYPROC) (void);
 #endif
 
+void InitializeGLdata(void);
 
 #ifdef __cplusplus
 }

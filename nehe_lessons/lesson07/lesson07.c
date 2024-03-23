@@ -51,7 +51,7 @@ GLfloat LightDiffuse[]  = { 1.0f, 1.0f, 1.0f, 1.0f };
 /* Light Position ( NEW ) */
 GLfloat LightPosition[] = { 0.0f, 5.0f, 0.0f, 1.0f };
 
-GLuint filter;     /* Which Filter To Use */
+GLuint filter = 0;     /* Which Filter To Use */
 GLuint texture[3]; /* Storage for 3 textures */
 
 
@@ -185,7 +185,8 @@ void handleKeyPress( SDL_keysym *keysym )
 	    /* 'f' key was pressed
 	     * this pages through the different filters
 	     */
-	    filter = ( ++filter ) % 3;
+        filter++;
+	    filter = (filter ) % 3;
 	    break;
 	case SDLK_l:
 	    /* 'l' key was pressed

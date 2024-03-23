@@ -5,7 +5,7 @@ endif
 include $(DEVKITPPC)/wii_rules
 
 CC = powerpc-eabi-gcc -MMD -MP -Wall -DGEKKO -mrvl -mcpu=750 -meabi -mhard-float -DHW_RVL -DGAMECUBE_WII -ggdb
-INCLUDE_FLAGS = -I ../../include/ -I $(DEVKITPRO)/portlibs/wii/include  -I $(DEVKITPPC)/include -I $(DEVKITPPC)/libogc/include
+INCLUDE_FLAGS = -I ../../include/ -I $(DEVKITPRO)/portlibs/wii/include  -I $(DEVKITPPC)/include -I $(DEVKITPRO)/libogc/include
 LIB_PATH = -L ../../src/ -L $(DEVKITPRO)/portlibs/wii/lib -L $(DEVKITPRO)/libogc/lib/wii
 
 all:
